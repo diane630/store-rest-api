@@ -10,7 +10,7 @@ from resources.user import UserRegister
 from resources.item import Item, ItemList
 from resources.store import Store, StoreList
 
-uri = os.getenv(('DATABASE_URL', 'sqlite:///data.db'))  # or other relevant config var
+uri = os.getenv('DATABASE_URL', 'sqlite:///data.db')  # or other relevant config var
 if uri.startswith("postgres://"):
     uri = uri.replace("postgres://", "postgresql://", 1)
 
